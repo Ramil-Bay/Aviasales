@@ -4,8 +4,6 @@ import Filter from '../Filter';
 
 import classes from './Main.module.scss';
 
-console.log(classes);
-
 const Main = () => {
 	const { main, main__logo, main__sort, main__button, active, main__img } = classes;
 	const activeButton = [main__button, active];
