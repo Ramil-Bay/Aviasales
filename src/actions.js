@@ -1,5 +1,16 @@
-export const all = () => ({type: 'ALL'});
-export const withoutTransfers = () => ({type: 'WITHOUT_TRANSFERS'});
-export const transfers1 = () => ({type: 'TRANSFERS_1'});
-export const transfers2 = () => ({type: 'TRANSFERS_2'});
-export const transfers3 = () => ({type: 'TRANSFERS_3'});
+
+export const filterTransfers = ({all, withoutTransfers, oneTransfers, twoTransfers, threeTransfers, allChecked = false}) => {
+
+	if (allChecked) {
+		withoutTransfers = all;
+		oneTransfers = all;
+		twoTransfers = all;
+		threeTransfers = all;
+	} else if ( withoutTransfers && oneTransfers && twoTransfers && threeTransfers) {
+		all = true
+	} else {
+		all = false
+	}
+
+	return {type: 'FILTER_TRANSFERS', tranfers: { all, withoutTransfers, oneTransfers, twoTransfers, threeTransfers }}
+}
