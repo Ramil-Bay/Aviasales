@@ -43,3 +43,4 @@ export const sortTicket = (sortValue) => ({
 	type: 'SORT_TICKET',
 	theСheapest: sortValue,
 });
+
