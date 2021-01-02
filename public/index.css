@@ -2,3 +2,7 @@ body {
 	margin: 0;
 	background-color: #f2fff9;
 }
+
+pre {
+  tab-size: 4;
+}
