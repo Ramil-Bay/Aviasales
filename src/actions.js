@@ -42,3 +42,4 @@ export const sortTicket = (sortValue) => ({
 	type: 'SORT_TICKET',
 	payload: sortValue,
 });
+
