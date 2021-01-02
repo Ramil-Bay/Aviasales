@@ -10,25 +10,25 @@ const data = {
 };
 
 const reducer = (state = data, action) => {
-	const { type, tranfers, tickets, stop, theСheapest } = action;
+	const { type, payload } = action;
 	switch (type) {
 		case 'FILTER_TRANSFERS':
 			return {
 				...state,
-				...tranfers,
+				...payload,
 			};
 
 		case 'ADD_TICKET':
 			return {
 				...state,
-				tickets: [...state.tickets, ...tickets],
-				stop,
+				tickets: [...state.tickets, ...payload.tickets],
+				stop: payload.stop,
 			};
 
 		case 'SORT_TICKET':
 			return {
 				...state,
-				theСheapest,
+				theСheapest: payload,
 			};
 
 		default:

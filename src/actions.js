@@ -30,16 +30,15 @@ export const filterTransfers = ({
 		obj.all = false;
 	}
 
-	return { type: 'FILTER_TRANSFERS', tranfers: { ...obj } };
+	return { type: 'FILTER_TRANSFERS', payload: { ...obj } };
 };
 
 export const addTicket = (res) => ({
 	type: 'ADD_TICKET',
-	tickets: res.tickets,
-	stop: res.stop,
+	payload: res,
 });
 
 export const sortTicket = (sortValue) => ({
 	type: 'SORT_TICKET',
-	theСheapest: sortValue,
+	payload: sortValue,
 });

@@ -65,3 +65,29 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.sort__message {
+	margin-top: 10px;
+	color: #2196F3;
+}
+
+.sort__messageSpan {
+	color: black;
+}
+
+@media screen and (max-width: 720px) {
+	.main {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.main__sort {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 478px) {
+	.main__button {
+		width: 100%;
+	}
+}

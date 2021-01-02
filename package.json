@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.3.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
@@ -59,10 +60,9 @@
     "prettier": "^2.2.1"
   },
   "lint-staged": {
-        "src/**/*.js": [ 
-        "prettier --single-quote --use-tabs --trailing-comma es5 --write", 
-        "git add"
-       ]
-    }
+    "src/**/*.js": [
+      "prettier --single-quote --use-tabs --trailing-comma es5 --write",
+      "git add"
+    ]
+  }
 }
-

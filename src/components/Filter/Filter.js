@@ -16,7 +16,7 @@ const Filter = ({ transfers, filterTransfers }) => {
 	const { filter, filter__header, filter__checkbox, filter__value } = classes;
 	return (
 		<div className={filter}>
-			<h4 className={filter__header}>КОЛИЧЕСТВО ПЕРЕСАДОК</h4>
+			<h4 className={filter__header}>КОЛИЧЕСТВО ПЕРЕСАДОК</h4>		
 			<input
 				type="checkbox"
 				name="all"

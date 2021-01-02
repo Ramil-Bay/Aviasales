@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 
 import * as actions from '../../actions';
 import Ticket from '../Ticket';
@@ -32,6 +33,8 @@ const Main = ({
 		spin__container,
 		spin__comments,
 		spin,
+		sort__message,
+		sort__messageSpan
 	} = classes;
 
 	const activeButton = [main__button, active];
@@ -74,6 +77,10 @@ const Main = ({
 		</div>
 	) : null;
 
+	const sortMessage = sortedTickets.length === 0 && stop ? 
+	<div className={sort__message}> <ArrowLeftOutlined style={{ marginRight: '10px' }} twoToneColor="#eb2f96" /> 
+	<span className={sort__messageSpan}>Пожалуйста, выберите количество пересадок</span></div> : null;
+
 	return (
 		<div className={main}>
 			<div className={main__img}>
@@ -99,6 +106,7 @@ const Main = ({
 				>
 					самый быстрый
 				</button>
+				{ sortMessage }
 				{spiner}
 				<ul className={main__list}>{firstTickets}</ul>
 			</div>

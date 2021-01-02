@@ -16,6 +16,7 @@
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 12px;
+	margin-right: auto;
 }
 
 .filter__checkbox {
@@ -40,4 +41,14 @@
 	margin-left: 10px;
 	margin-bottom: 15px;
 	vertical-align: middle;
+}
+
+@media screen and (max-width: 720px) {
+	.filter {
+		width: 100%;
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
 }
